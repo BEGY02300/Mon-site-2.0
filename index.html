@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSaga - Connexion et Inscription</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="techsaga.png" alt="Logo TechSaga">
+      <h1>TechSaga</h1>
+    </div>
+  </header>
+
+  <main>
+    <div id="authContainer">
+      <!-- Connexion -->
+      <form id="loginForm" class="form">
+        <h2>Connexion</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+        <p>Pas encore inscrit ? <span id="switchToSignUp">Créer un compte</span></p>
+      </form>
+
+      <!-- Inscription -->
+      <form id="signupForm" class="form hidden">
+        <h2>Inscription</h2>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Mot de passe" required>
+        <input type="text" id="signupUsername" placeholder="Pseudo" required>
+        <input type="file" id="signupAvatar" accept="image/*">
+        <button type="submit">S'inscrire</button>
+        <p>Déjà inscrit ? <span id="switchToLogin">Se connecter</span></p>
+      </form>
+    </div>
+
+    <div id="userContainer" class="hidden">
+      <h2 id="welcomeMessage">Bienvenue, <span id="usernameDisplay"></span> !</h2>
+      <img id="userAvatar" src="uploads/default-avatar.png" alt="Avatar utilisateur">
+      <form id="updateForm">
+        <input type="text" id="newUsername" placeholder="Nouveau pseudo">
+        <input type="file" id="newAvatar" accept="image/*">
+        <button type="submit">Mettre à jour</button>
+      </form>
+      <button id="logoutButton">Se déconnecter</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
